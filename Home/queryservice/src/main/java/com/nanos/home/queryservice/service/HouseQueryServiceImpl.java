@@ -19,7 +19,7 @@ public class HouseQueryServiceImpl implements HouseQueryService {
 
     @Autowired
     RestTemplate restTemplate;
-    String DATA_SERVICE_HOST_URL="http://localhost:8081/api/v1/house/data/";
+    String DATA_SERVICE_HOST_URL="https://dataservice-v1.herokuapp.com/api/v1/house/data/";
     @Override
     public List<HouseDto> getBudgetHome(Float minPrice, Float maxPrice) {
         String url =DATA_SERVICE_HOST_URL+"/getBudgetHome?minPrice="+minPrice+"&maxPrice="+maxPrice;
